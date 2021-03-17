@@ -1,0 +1,17 @@
+name = "XXX"
+type = "javascript"
+account_id = "XXX"
+workers_dev = true
+route = ""
+zone_id = ""
+
+kv_namespaces = [ 
+         { binding = "XXX", id = "XXX", preview_id = "XXX" }
+]
+
+[env.production]
+# The ID of the domain to deploying to
+zone_id = "XXX"
+
+# The route pattern your Workers application will be served at
+route = "XXX"
