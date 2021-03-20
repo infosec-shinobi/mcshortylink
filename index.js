@@ -15,6 +15,12 @@ addEventListener('fetch', event => {
       
       // Helpful to understand why we are creating a new url here: https://javascript.info/url
       let keyphrase = new URL(request.url).pathname.replace("/", "");
+
+      if (keyphrase == ""){
+        //debug alerting
+        //console.log(`Inside the empty keyphase loop`)
+        return Response.redirect(default_domain, 301)
+      }
       //debug alerting
       //console.log(`keyphrase is: ${keyphrase}`)
       // lookup url to redirect to from KV
