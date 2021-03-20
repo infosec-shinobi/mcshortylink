@@ -16,8 +16,7 @@ Checkout Cloudflare's excellent getting started guide [here](https://developers.
     wrangler generate projectname https://github.com/cloudflare/worker-template
     ```
 1. Drop in the index.js file from here.
-
-    Ensure you update the top two global vars (default_domain and shortener_tld) with appropriate values.
+    Ensure you update the top global vars (default_domain) with an appropriate value.
 1. If you plan on doing this with a custom url shortener domain, the DNS needs to be managed by Cloudflare. Additionally, if you are going to be doing this with a subdomain (ex. go.shortlink.com) you need to make sure there is a cname for go that points to shortlink.com.
 1. You also need to create a KV in cloudflare. The key will be the "slug" at the end of your shortened url (ex. 'github' is the slug of go.shortlink.com/github) and the value will be the full url you want to redirect to. 
 1. You need to update your wranlger.toml (an example one has been provided here for you) with appropriate data. Specifically, make sure you update
